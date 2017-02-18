@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Let's Bring The Change</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }
+  .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right , .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e;
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+
+  #wrapper-p, #wrapper-p2, #wrapper-p3, #wrapper-p4, #wrapper-p5, #wrapper-p6, #wrapper-p7, #wrapper-p8, #wrapper-p9,#wrapper-p10,#wrapper-p11,#wrapper-p12,#wrapper-p13{
+   display:none;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   overflow: scroll;
+   background-color: rgba(0,0,0,0.6);
+   z-index: 999999999999999;
+  }
+  #popup,#popup1 ,#popup2,#popup3,#popup4,#popup5,#popup6,#popup7,#popup8,#popup9,#popup10,#popup11,#popup12,#popup13{
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 70%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    display: none;
+    z-index: 99999999999999999;
+    text-align: left;
+  }
+  #popupclose,#popupclose1,#popupclose2,#popupclose3,#popupclose4,#popupclose5,#popupclose6,#popupclose7,#popupclose8,#popupclose9,#popupclose10,#popupclose11,#popupclose12 ,#popupclose13{
+    float: right;
+    padding: 10px;
+    cursor: pointer;
+  }
+  #button ,#button2,#button3,#button4,#button5,#button6,#button7,#button8,#button9,#button10,#button11,#button12,#button13{
+    cursor: pointer;
+  }
+  .popupcontent {
+    padding: 10px;
+
+  }
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">GYMKHANA COUNCIL ELECTIONS</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">AGENDAS</a></li>
+        <li><a href="#services">CANDIDATES</a></li>
+        <li><a href="#portfolio">PROSPECTIVES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Let's Bring The Change</h1>
+  <br />
+  <p>A Leader is the person who stands with the group not walks ahead the group</p>
+  <!-- <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form> -->
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class=col-sm-2>
+    </div>
+    <div class="col-sm-8" >
+      <h1 style="text-align:center;color:#303030">GYMKHANA &nbsp&nbsp ELECTIONS</h1>
+      <br>
+      <p style="text-align:center">Gymkhana Elections every year play a crucial role in selection of the best candidates from college who will represent the student body.</p>
+      <p>This year there exists the following posts -<p>
+      <ol>
+      <li> President</li>
+      <li>Vice-President</li>
+      <li>General Secretary</li>
+      <li> Assistant General Secretary</li>
+      <li>Hall Representatives</li>
+      </ol>
+
+      <h3 style="text-align:center">Choose wise. Think Wise.</h3>
+      <!-- <br><button class="btn btn-default btn-lg">Get in Touch</button> -->
+    </div>
+    <!-- <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div> -->
+  </div>
+</div>
+
+<!-- <div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div> -->
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>COMMON AGENDAS</h2>
+  <h4>What we offer</h4>
+  <p>(Click to know more)<p>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-1 img1">
+
+    </div>
+    <div class="col-sm-2 img1">
+      <img id="button5" src="images/agendas/01.png">
+    </div>
+    <div class="col-sm-2 img1">
+      <img id="button6" src="images/agendas/02.png">
+    </div>
+    <div class="col-sm-2 img1">
+      <img id="button7" src="images/agendas/03.png">
+    </div>
+    <div class="col-sm-2 img1">
+      <img id="button8" src="images/agendas/04.png">
+    </div>
+    <div class="col-sm-2 img1">
+      <img id="button13" src="images/agendas/09.png">
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-2 img1">
+
+    </div>
+    <div class="col-sm-2 img1">
+      <img id="button9" src="images/agendas/05.png">
+    </div>
+    <div class="col-sm-2 img1">
+      <img id="button10" src="images/agendas/06.png">
+    </div>
+    <div class="col-sm-2 img1">
+      <img id="button11" src="images/agendas/07.png">
+    </div>
+    <div class="col-sm-2 img1">
+      <img id="button12" src="images/agendas/08.png">
+    </div>
+  </div>
+</div>
+
+<div id="wrapper-p">
+  <div id="popup">
+    <div class="popupcontrols">
+      <span id="popupclose">X</span>
+    </div>
+    <div class="popupcontent">
+      <h1 style="text-align:center">Know Your Candidate</h1>
+        <p><b>Name</b> – Jeet Karmakar</p>
+        <p><b>Age</b> – 22</p>
+        <p><b>Department</b> – Computer Science and Engineering</p>
+        <p><b>Hometown </b>– Kolkata, India</p>
+        <p><b>Status <b> - Placed at MAQ Software</p>
+        <p>Member of MNTC, Founder of Calcutta Delights, Freelancer and Android Developer
+        “An wantrepreneur by heart”</p>
+      <h2 class="bold">Manifesto - </h2>
+      <ol>
+        <li> Transparency in funds and maintenance of peace in college campus.</li>
+        <li>Separate training cell  for technical and entrepreneurial activities as well as to improve the placement scenario of PG and foreign students.</li>
+        <li> An effective online Q/A Forum for NIT Durgapur students similar to Quora.</li>
+        <li>Assigning counsellors cum mentors for 1st year students to improve their knowledge about placement scenarios, internship opportunities, training prospectives.</li>
+        <li>PG involvement in college's cocurricular activities and thereby increasing funds for all the college clubs.</li>
+      </ol>
+      <h2 class="bold">Credentials -</h2>
+      <ol>
+        <li> Has been an HR of Hall 3. </li>
+        <li> Has been a responsible Mess Secretary of Hall 3. </li>
+        <li> Has succesfully conducted Hall Night for Hall 3. </li>
+        <li> Founded Calcutta Delights and got featured in Yourstory to initially bring the wide range of sweets within the reaches of the students of NIT Durgapur. </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div id="wrapper-p2">
+  <div id="popup2">
+    <div class="popupcontrols">
+      <span id="popupclose2">X</span>
+    </div>
+    <div class="popupcontent">
+    </div>
+  </div>
+</div>
+<div id="wrapper-p3">
+  <div id="popup3">
+    <div class="popupcontrols">
+      <span id="popupclose3">X</span>
+    </div>
+    <div class="popupcontent">
+      <h2 class="bold">About the Event</h2>
+    </div>
+  </div>
+</div>
+<div id="wrapper-p4">
+  <div id="popup4">
+    <div class="popupcontrols">
+      <span id="popupclose4">X</span>
+    </div>
+    <div class="popupcontent">
+      <h2 style="text-align:center">Know your candidate</h2>
+        <p><b>Name</b> – Nupur Singh</p>
+        <p><b>Age</b> – 20</p>
+        <p><b>Department</b> – Electrical Engineering</p>
+        <p><b>Hometown </b>– Durgapur, West Bengal,India</p>
+        <p><b>Status <b> - </p>
+        <p>Member of MNTC, Founder of Calcutta Delights, Freelancer and Android Developer
+        “An wantrepreneur by heart”</p>
+         <h2 class="bold">CONTRIBUTIONS  TILL  NOW :-</h2>
+			<li>HAS  ACTIVELY  PARTICIPATED  IN  EACH  AND  EVERY  STUDENT  MOVEMENT  FOR  THE  BETTERMENT  OF  ALL  THE  STUDENTS</li>
+			<li>HAS  ALWAYS  BEEN  AN  ACTIVE  AND  HARD-WORKING MESS  AS  WELL  AS  HALL  SECRETARY  SINCE  FIRST  YEAR</li>
+			<li>HAS  ENTHUSIASTICALLY  ORGANISED  EVENTS  IN THE HOSTEL</li>
+			<li>HAS  SMARTLY  IMPLEMENTED  THE  ALLOTMENT  OF  ROOMS  TO  ENSURE  THAT  EVERYBODY  GETS  THEIR  PREFERRED  ROOMS</li>
+			<li>HAS  ENSURED THAT THE PROBLEMS OF LAUNDRY, LIFT, GEYSERS etc ARE SUCCESSFULLY RESOLVED</li>
+
+		<h2 class="bold">AGENDAS :- </h2>
+			<li>LIBRARY TIMINGS SHOULD BE EXTENDED FOR ALL STUDENTS ESPECIALLY DURING THE EXAM TIME</li>
+			<li>STRONG WIFI AND BETTER INTERNET FACILITIES IN ALL THE GIRLS HOSTELS WITH ADDITIONAL LAN PORT</li>
+			<li>ONLINE MESS FEE PAYMENT FOR ALL THE HOSTELS</li>
+			<li>ENSURING THAT THE NEW GIRLS' HOSTEL IS OPENED AS SOON AS POSSIBLE SO THAT THERE IS NO CONFUSION OR DISPARITY IN THE ALLOTMENT OF ROOMS</li>
+			<li>WE WILL REQUEST TO INCREASE THE NUMBER OF GUARDS ON THAT LH ROAD AS IT IS NOT AT ALL SAFE FOR GIRLS</li>
+			<li>BOUNCERS FOR MAINTAINING PEACE DURING RECSTACY</li>
+			<li>PROPOSAL FOR A COMMEETTEE WHICH COMPRISES OF ONLY GIRLS FROM DIFFERENT YEARS WHERE THEY CAN DISCUSS ABOUT THEIR HOSTEL PROBLEMS AND HOW TO SOLVE THEM</li>
+			<li>SEPARATE GYM FOR GIRLS ALONG WITH GYM INSTRUCTOR AND BETTER EQUIPMENTS SUITABLE FOR GIRLS</li>
+    </div>
+  </div>
+</div>
+<div id="wrapper-p5">
+  <div id="popup5">
+    <div class="popupcontrols">
+      <span id="popupclose5">X</span>
+    </div>
+    <div class="popupcontent">
+      <h2 class="bold">About the Event</h2>
+    </div>
+  </div>
+</div>
+<div id="wrapper-p6">
+  <div id="popup6">
+    <div class="popupcontrols">
+      <span id="popupclose6">X</span>
+    </div>
+    <div class="popupcontent">
+      <h2 class="bold">About the Event</h2>
+    </div>
+  </div>
+</div>
+<div id="wrapper-p7">
+  <div id="popup7">
+    <div class="popupcontrols">
+      <span id="popupclose7">X</span>
+    </div>
+    <div class="popupcontent">
+
+    </div>
+  </div>
+</div>
+<div id="wrapper-p8">
+  <div id="popup8">
+    <div class="popupcontrols">
+      <span id="popupclose8">X</span>
+    </div>
+    <div class="popupcontent">
+      <p>Online Portal – We assure to open an effective online Q/A Forum for NIT Durgapur students similar to Quora.
+       #OneVoteOneStep #LetsBringTheChange</p>
+    </div>
+  </div>
+</div>
+<div id="wrapper-p9">
+  <div id="popup9">
+    <div class="popupcontrols">
+      <span id="popupclose9">X</span>
+    </div>
+    <div class="popupcontent">
+
+    </div>
+  </div>
+</div>
+<div id="wrapper-p10">
+  <div id="popup10">
+    <div class="popupcontrols">
+      <span id="popupclose10">X</span>
+    </div>
+    <div class="popupcontent">
+      <h2 class="bold">About the Event</h2>
+    </div>
+  </div>
+</div>
+<div id="wrapper-p11">
+  <div id="popup11">
+    <div class="popupcontrols">
+      <span id="popupclose11">X</span>
+    </div>
+    <div class="popupcontent">
+      <p>Beautification of College Areas – College Areas lay abundant with dumped waste and dry grass ad well as
+      with construction materials like sand, cement, rods lying around. Let’s bring a change in the scenario,
+      Let’s bring a change in the college Environment. #OneVoteOneStep #LetsBringTheChange</p>
+    </div>
+  </div>
+</div>
+<div id="wrapper-p12">
+  <div id="popup12">
+    <div class="popupcontrols">
+      <span id="popupclose12">X</span>
+    </div>
+    <div class="popupcontent">
+      <h2 class="bold">About the Event</h2>
+    </div>
+  </div>
+</div>
+<div id="wrapper-p13">
+  <div id="popup13">
+    <div class="popupcontrols">
+      <span id="popupclose13">X</span>
+    </div>
+    <div class="popupcontent">
+      <h2 class="bold">About the Event</h2>
+    </div>
+  </div>
+</div>
+
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Our Candidates</h2>
+  <h4>Choose Wise, Think Wise</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-3">
+      <div class="thumbnail">
+        <br>
+        <p><strong>Jeet Karmakar</strong></p>
+        <p>President</p>
+        <img src="images/01.jpg" id="button" alt="Paris" >
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="thumbnail">
+        <br>
+        <p><strong>Pasan Prasad</strong></p>
+        <p>Vice President</p>
+        <img src="images/02.jpg" id="button2" alt="New York" >
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="thumbnail">
+        <br>
+        <p><strong>Rony Saha</strong></p>
+        <p>Genral Secretry</p>
+        <img src="images/03.jpg" id="button3" alt="San Francisco" >
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="thumbnail">
+        <br>
+        <p><strong>Nupur Singh</strong></p>
+        <p>Vice President (Girls)</p>
+        <img src="images/04.jpg" id="button4" alt="San Francisco" >
+      </div>
+    </div>
+
+  </div><br>
+  <h2>Our Team</h2>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+          <br>
+          <p>Jeet Karmakar (President)</p>
+          <p>Pasam Prasad (Vice President)</p>
+          <p>Rony Saha (General Secretary)</p>
+          <p>Nupur Singh (Vice President-Girls)</p>
+          <p>Ravi Sai Teja (AGS-cultural)</p>
+          <p>Saurabh Modak(Hall 4 Representative)</p>
+
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <br>
+        <p>Shakhir Pervez(Hall 5 Representative)</p>
+        <p>Vijay Krishna(Hall 5 Representative)</p>
+        <p>Maninder Repala(Hall 1 Representative)</p>
+        <p>Sourav Kundu(Hall 1 Representative)</p>
+        <p>Rishav Ghosh(Hall 2 Representative)</p>
+        <p>Battula Sai Vinesh(Hall 3 Representative)</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <br>
+        <p>Deepsikha Sen(Hall 10 Representative)</p>
+        <p>Srubabati Basu(Hall 8 Representative)</p>
+        <p>Sudipto Chakraborty(Hall 11 Representative)</p>
+        <p>KV Surya(Hall 11 Representative)</p>
+        <p>Poulomee Roy(Hall 7 Representative)</p>
+      </div>
+    </div>
+
+
+  </div>
+
+  <h2>Our Prospectives</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+
+
+<!-- Container (Contact Section) -->
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdz9y-mYyBgHLqMWrYZNToLg-Cs770VqFNIDaDGwxDiRr8vDg/viewform?embedded=true" width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+    </div>
+    <!-- <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+<!-- Add Google Maps -->
+<!-- <div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script> -->
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+<!-- <footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer> -->
+
+<script>
+$(document).ready(function(){
+  var closePopup = document.getElementById("popupclose");
+  var overlay = document.getElementById("wrapper-p");
+  var popup = document.getElementById("popup");
+  var button = document.getElementById("button");
+  // Close Popup Event
+  closePopup.onclick = function() {
+    overlay.style.display = 'none';
+    popup.style.display = 'none';
+  };
+  // Show Overlay and Popup
+  button.onclick = function() {
+    overlay.style.display = 'block';
+    popup.style.display = 'block';
+  };
+  var closePopup2 = document.getElementById("popupclose2");
+  var overlay2 = document.getElementById("wrapper-p2");
+  var popup2 = document.getElementById("popup2");
+  var button2 = document.getElementById("button2");
+  // Close Popup Event
+  closePopup2.onclick = function() {
+    overlay2.style.display = 'none';
+    popup2.style.display = 'none';
+  };
+  // Show Overlay and Popup
+  button2.onclick = function() {
+    overlay2.style.display = 'block';
+    popup2.style.display = 'block';
+  };
+  var closePopup3 = document.getElementById("popupclose3");
+  var overlay3 = document.getElementById("wrapper-p3");
+  var popup3 = document.getElementById("popup3");
+  var button3 = document.getElementById("button3");
+  // Close Popup Event
+  closePopup3.onclick = function() {
+    overlay3.style.display = 'none';
+    popup3.style.display = 'none';
+  };
+  // Show Overlay and Popup
+  button3.onclick = function() {
+    overlay3.style.display = 'block';
+    popup3.style.display = 'block';
+  };
+  var closePopup4 = document.getElementById("popupclose4");
+  var overlay4 = document.getElementById("wrapper-p4");
+  var popup4 = document.getElementById("popup4");
+  var button4 = document.getElementById("button4");
+  // Close Popup Event
+  closePopup4.onclick = function() {
+    overlay4.style.display = 'none';
+    popup4.style.display = 'none';
+  };
+  // Show Overlay and Popup
+  button4.onclick = function() {
+    overlay4.style.display = 'block';
+    popup4.style.display = 'block';
+  };
+  var closePopup5 = document.getElementById("popupclose5");
+  var overlay5 = document.getElementById("wrapper-p5");
+  var popup5 = document.getElementById("popup5");
+  var button5 = document.getElementById("button5");
+  // Close Popup Event
+  closePopup5.onclick = function() {
+    overlay5.style.display = 'none';
+    popup5.style.display = 'none';
+  };
+  // Show Overlay and Popup
+  button5.onclick = function() {
+    overlay5.style.display = 'block';
+    popup5.style.display = 'block';
+  };
+  var closePopup6 = document.getElementById("popupclose6");
+  var overlay6 = document.getElementById("wrapper-p6");
+  var popup6 = document.getElementById("popup6");
+  var button6 = document.getElementById("button6");
+  // Close Popup Event
+  closePopup6.onclick = function() {
+    overlay6.style.display = 'none';
+    popup6.style.display = 'none';
+  };
+  // Show Overlay and Popup
+  button6.onclick = function() {
+    overlay6.style.display = 'block';
+    popup6.style.display = 'block';
+  };
+  var closePopup7 = document.getElementById("popupclose7");
+  var overlay7 = document.getElementById("wrapper-p7");
+  var popup7 = document.getElementById("popup7");
+  var button7 = document.getElementById("button7");
+  // Close Popup Event
+  closePopup7.onclick = function() {
+    overlay7.style.display = 'none';
+    popup7.style.display = 'none';
+  };
+  // Show Overlay and Popup
+  button7.onclick = function() {
+    overlay7.style.display = 'block';
+    popup7.style.display = 'block';
+  };
+  var closePopup8 = document.getElementById("popupclose8");
+  var overlay8 = document.getElementById("wrapper-p8");
+  var popup8 = document.getElementById("popup8");
+  var button8 = document.getElementById("button8");
+  // Close Popup Event
+  closePopup8.onclick = function() {
+    overlay8.style.display = 'none';
+    popup8.style.display = 'none';
+  };
+  // Show Overlay and Popup
+  button8.onclick = function() {
+    overlay8.style.display = 'block';
+    popup8.style.display = 'block';
+  };
+  var closePopup9 = document.getElementById("popupclose9");
+  var overlay9 = document.getElementById("wrapper-p9");
+  var popup9 = document.getElementById("popup9");
+  var button9 = document.getElementById("button9");
+  // Close Popup Event
+  closePopup9.onclick = function() {
+    overlay9.style.display = 'none';
+    popup9.style.display = 'none';
+  };
+  // Show Overlay and Popup
+  button9.onclick = function() {
+    overlay9.style.display = 'block';
+    popup9.style.display = 'block';
+  };
+  var closePopup10 = document.getElementById("popupclose10");
+  var overlay10 = document.getElementById("wrapper-p10");
+  var popup10 = document.getElementById("popup10");
+  var button10 = document.getElementById("button10");
+  // Close Popup Event
+  closePopup10.onclick = function() {
+    overlay10.style.display = 'none';
+    popup10.style.display = 'none';
+  };
+  // Show Overlay and Popup
+  button10.onclick = function() {
+    overlay10.style.display = 'block';
+    popup10.style.display = 'block';
+  };
+  var closePopup11 = document.getElementById("popupclose11");
+  var overlay11 = document.getElementById("wrapper-p11");
+  var popup11 = document.getElementById("popup11");
+  var button11 = document.getElementById("button11");
+  // Close Popup Event
+  closePopup11.onclick = function() {
+    overlay11.style.display = 'none';
+    popup11.style.display = 'none';
+  };
+  // Show Overlay and Popup
+  button11.onclick = function() {
+    overlay11.style.display = 'block';
+    popup11.style.display = 'block';
+  };
+  var closePopup12 = document.getElementById("popupclose12");
+  var overlay12 = document.getElementById("wrapper-p12");
+  var popup12 = document.getElementById("popup12");
+  var button12 = document.getElementById("button12");
+  // Close Popup Event
+  closePopup12.onclick = function() {
+    overlay12.style.display = 'none';
+    popup12.style.display = 'none';
+  };
+  // Show Overlay and Popup
+  button12.onclick = function() {
+    overlay12.style.display = 'block';
+    popup12.style.display = 'block';
+  };
+
+  var closePopup13 = document.getElementById("popupclose13");
+  var overlay13 = document.getElementById("wrapper-p13");
+  var popup13 = document.getElementById("popup13");
+  var button13 = document.getElementById("button13");
+  // Close Popup Event
+  closePopup13.onclick = function() {
+    overlay13.style.display = 'none';
+    popup13.style.display = 'none';
+  };
+  // Show Overlay and Popup
+  button13.onclick = function() {
+    overlay13.style.display = 'block';
+    popup13.style.display = 'block';
+  };
+
+
+
+
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
